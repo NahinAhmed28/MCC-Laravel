@@ -18,9 +18,11 @@ Route::get('/', function () {
 });
 
 
-Route::get('/user', [App\Http\Controllers\UserController::class,'index'])->name('user');;
-Route::get('/userdata', [App\Http\Controllers\UserController::class,'store'])->name('userdata');;
-Route::view('/about', "about")->name('about');;
+Route::get('/user', [App\Http\Controllers\UserController::class,'index'])->name('user');
+Route::get('/userdata', [App\Http\Controllers\UserController::class,'store'])->name('userdata');
+Route::view('/about', "about")->name('about');
+
+// Route::resource('/posts',[App\Http\Controllers\PostController::class]);
 
 
 
