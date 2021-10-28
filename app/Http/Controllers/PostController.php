@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        
+
         return view('post.index');
     }
 
@@ -47,7 +47,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('post.show');
     }
 
     /**
@@ -58,7 +58,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('post.edit');
     }
 
     /**

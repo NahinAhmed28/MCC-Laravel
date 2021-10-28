@@ -20,10 +20,12 @@ Route::get('/', function () {
 
 Route::get('/user', [App\Http\Controllers\UserController::class,'index'])->name('user');
 Route::get('/userdata', [App\Http\Controllers\UserController::class,'store'])->name('userdata');
+Route::get('/form', [App\Http\Controllers\FormController::class,'index'])->name('form');
+
 Route::view('/about', "about")->name('about');
 
-// Route::resource('/posts',[App\Http\Controllers\PostController::class]);
 
+Route::get('/posts', [App\Http\Controllers\PostController::class,'index'])->name('posts.index');
 
 
 Auth::routes();

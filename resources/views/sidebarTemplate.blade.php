@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Laravel</title>
         <!-- Fonts -->
-        
+
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -56,7 +56,7 @@
             margin-left: -15rem;
         }
         }
-        </style>    
+        </style>
     </head>
     <body>
         <div class="d-flex" id="wrapper">
@@ -67,9 +67,9 @@
             <a href="{{ url('/')}} " class="list-group-item list-group-item-action bg-light">Dashboard</a>
             <a href="{{route('about')}}" class="list-group-item list-group-item-action bg-light">About Us</a>
             <a href="{{route('user')}}" class="list-group-item list-group-item-action bg-light">User Profile</a>
-            <a href="{{route('post.index')}}" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
+            <a href="{{route('posts.index')}}" class="list-group-item list-group-item-action bg-light">Posts Index</a>
             <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Form Fill Up</a>
+            <a href="{{route('form')}}" class="list-group-item list-group-item-action bg-light">Form Fill Up</a>
             <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
         </div>
         </div>
@@ -104,12 +104,9 @@
             </div>
         </nav>
 
-        {{-- <div class="container-fluid">
-            <h1 class="mt-4">laravel 7 Simple Sidebar Template</h1>
-            <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-            <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
-        </div> --}}
+            <div class="mx-3 my-2">
 @yield('content')
+            </div>
         </div>
         <!-- /#page-content-wrapper -->
         </div>
