@@ -10,9 +10,11 @@ class UserController extends Controller
     public function index(){
         return view('users');
     }
-    public function store(){
+    public function show(){
        
-        return DB::select("select * from users");
+        $users = DB::select("select * from users");
+        return view('UserData' , compact('users') );
+        
     }
 }
 
