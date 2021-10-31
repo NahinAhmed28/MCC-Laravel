@@ -20,8 +20,9 @@ Route::get('/', function () {
 
 Route::get('user', [App\Http\Controllers\UserController::class,'index'])->name('user');
 Route::get('userdata', [App\Http\Controllers\UserController::class,'show'])->name('userdata');
-Route::get('form', [App\Http\Controllers\FormController::class,'index'])->name('form');
-Route::post('form-save', [App\Http\Controllers\FormController::class,'store'])->name('form.save');
+Route::view('form','form');
+Route::post('form', [App\Http\Controllers\MemberController::class,'store'])->name('form');
+Route::get('form-show', [App\Http\Controllers\MemberController::class,'show'])->name('form-show');
 
 Route::view('/about', "about")->name('about');
 
