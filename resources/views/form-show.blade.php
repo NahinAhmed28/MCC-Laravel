@@ -24,8 +24,20 @@
                 <td scope="col">{{$dat->address}}</td>
               </tr>
         </tbody>
-
+    
 
     @endforeach
+</table>
 
+    {{-- paggination --}}
+    <div class="pagination" >
+        {{ $data->links() }}
+   </div>
+   
+   <style>
+    .w-5{
+        display: none;
+    }
+    </style> 
 @endsection
+

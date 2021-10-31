@@ -25,7 +25,7 @@ class MemberController extends Controller
    }
    public function show()
     {
-        $data= Member::all();
+        $data= Member::paginate(5);
        return view ("form-show",compact('data'));
         
     }
