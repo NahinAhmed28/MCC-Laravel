@@ -68,8 +68,8 @@
             <a href="{{route('about')}}" class="list-group-item list-group-item-action bg-light">About Us</a>
             <a href="{{route('user')}}" class="list-group-item list-group-item-action bg-light">User Profile</a>
             <a href="{{route('posts.index')}}" class="list-group-item list-group-item-action bg-light">Posts Index</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-            <a href="{{route('form')}}" class="list-group-item list-group-item-action bg-light">Form Fill Up</a>
+            <a href="{{route('employee')}}" class="list-group-item list-group-item-action bg-light">Employee form fill up</a>
+            <a href="{{route('form')}}" class="list-group-item list-group-item-action bg-light">Member Form Fill Up</a>
             <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
         </div>
         </div>

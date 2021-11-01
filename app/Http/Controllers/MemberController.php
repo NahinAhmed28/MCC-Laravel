@@ -12,18 +12,19 @@ class MemberController extends Controller
         // return view('form');
         
     }
-   public function store(Request $req)
+   public function storeMember(Request $req)
    {
     
     //    return $req->file('file')->store('img');
     $member = new Member;
+    
     $member->name=$req->name;
     $member->email=$req->email;
     $member->address=$req->address;
     $member->save();
     return redirect("form-show");
    }
-   public function show()
+   public function showMember()
     {
         $data= Member::paginate(5);
        return view ("form-show",compact('data'));

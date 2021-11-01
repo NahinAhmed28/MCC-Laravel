@@ -2,38 +2,45 @@
 @extends('sidebarTemplate')
 
 @section('content')
-<div>
-  <x-header componentName="User" />
+<div class="row">
+    <div class="col-md-6">
+        <x-header componentName="User" />
+    </div>
+
+    <div class="col-md-6">
+        <a class="btn btn-primary" href="{{route('posts.create')}}" role="button">Add New Post</a>
+    </div>
     <h3> Post body</h3>
 
     <table class="table">
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Caption</th>
           </tr>
         </thead>
+
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+        @foreach($posts as $post)
+        <tr>
+
+            <td>{{$post->id}}</td>
+
+        <td> {{$post->title}}</td>
+        <td> {{$post->description}}</td>
+        <td> {{$post->caption}}</td>
+
+            </tr>
+
+        @endforeach
+
+
+{{-------}}
+
         </tbody>
+
       </table>
 
     </div>

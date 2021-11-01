@@ -2,7 +2,7 @@
 @extends('sidebarTemplate')
 
 @section('content')
-  <x-header componentName="members list" />
+  <x-header componentName="employee list" />
 
    
         
@@ -33,7 +33,12 @@
     <div class="pagination" >
         {{ $data->links() }}
    </div>
+   <br><br> 
    
+
+
+
+
    <style>
     .w-5{
         display: none;

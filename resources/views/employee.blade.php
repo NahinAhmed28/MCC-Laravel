@@ -3,9 +3,9 @@
 
 @section('content')
 
-        <x-header componentName="Form" />
-<h3>member add form fill up</h3>
-        <form action="form" method="POST" enctype="multipart/form-data">
+        <x-header componentName="Employee" />
+<h3>Employee add  -> form fill up</h3>
+        <form action="employee" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-row">
                 <div class="col-md-6 mb-3">
@@ -43,7 +43,7 @@
             </div> <br> --}}
             <button class="btn btn-primary" type="submit">Submit form</button>
         </form>
-
-
+<br> <br> 
+        <a href="{{route('employee-show')}}" class="list-group-item list-group-item-action bg-light">Employee List</a>
 
 @endsection

@@ -12,10 +12,21 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+    public $postModel;
+    public function __construct(Post $post)
+    {
+        $this->postModel = $post;
+    }
+
+
     public function index()
     {
+        $posts = $this->postModel->get();
 
-        return view('post.index');
+
+        return view('post.index',compact('posts'));
     }
 
     /**
@@ -36,7 +47,20 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $value= $this->postModel->create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'caption' => $request->caption,
+        ]);
+
+        if ($value)
+        {
+            return redirect()->route('posts.index');
+        }else
+        {
+            return redirect()->route('posts.create');
+
+        }
     }
 
     /**
