@@ -1,14 +1,25 @@
 # MCC Laravel
 
-MCC Laravel is a Laravel-based web application repository. It replaces the default framework README with project-focused setup notes so the repository is easier to understand and run.
+MCC Laravel is a Laravel-based web application repository.
 
-## Project Details
+## Features
 
-- Repository: `NahinAhmed28/MCC-Laravel`
-- Default branch: `master`
-- Visibility: public
-- Project type: Laravel web application
-- Main focus: PHP/Laravel application development
+- Laravel routing, controller, and model structure
+- Database-backed workflow foundation
+- Blade/Vite front-end asset workflow
+- Environment-based local and production configuration
+
+## Modules
+
+- Authentication module: user access and protected routes when enabled
+- Core application module: business records and workflows
+- Admin module: management screens and settings
+- Data module: migrations, models, seeders, and persistence
+- Presentation module: Blade views, CSS, JavaScript, and assets
+
+## System Architecture
+
+The project follows Laravel MVC architecture. Routes map requests to controllers, controllers coordinate business logic, models persist data in the database, and views/assets render the user interface. Environment variables configure database, mail, app URL, and deployment-specific settings.
 
 ## Getting Started
 
@@ -22,9 +33,3 @@ npm install
 npm run dev
 php artisan serve
 ```
-
-Configure database and application settings in `.env` before running migrations or serving the app.
-
-## Notes
-
-Keep credentials out of source control and update this README with project-specific routes, modules, and deployment steps.
